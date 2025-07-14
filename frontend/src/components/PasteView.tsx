@@ -13,7 +13,7 @@ export default function PasteView() {
     axios
       .get(`${API_URL}/paste/${id}`)
       .then((res) => setContent(res.data.content))
-      .catch((err) => setError("Paste not found or expired"));
+      .catch((_) => setError("Paste not found or expired"));
   }, [id]);
 
   return (
